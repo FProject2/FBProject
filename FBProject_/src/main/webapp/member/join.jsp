@@ -54,15 +54,17 @@ $(function(){
 	})
 	
 	// 유효성 검사
-	let name = $('#name').val();
-	let id = $('#id').val();
-	let nickname = $('#nickname').val();
-	let pwd = $('#pwd').val();
-	let email = $('#email').val();
-	let post = $('#post').val();
-	let phone = $('#phone').val();
+	
 	
 	$('#joinBtn').click(function(){
+		
+		let name = $('#name').val();
+		let id = $('#id').val();
+		let nickname = $('#nickname').val();
+		let pwd = $('#pwd').val();
+		let email = $('#email').val();
+		let post = $('#post').val();
+		let phone = $('#phone').val();
 		
 		if(name.trim()=="")
 		{
@@ -146,12 +148,12 @@ $(function(){
 		<form method=post action="../member/join_ok.do" name="joinFrm" id="joinFrm">
 				<div class="form-group">
 					<label class="form-label mt-4 text-left">이름</label>
-					<input type="text" class="form-control" name=name id=name>
+					<input type="text" class="form-control" name=name id=name required>
 				</div>
 			
 				<div class="form-group">
 					<label class="form-label mt-4 text-left">아이디</label>
-					<input type="text" class="form-control" name=id id=id readonly>
+					<input type="text" class="form-control" name=id id=id readonly required>
 					<div class="text-right">
 					<input type=button value="아이디 중복체크" class="btn btn-sm btn-danger text-right" id="idCheckBtn">
 					</div>
@@ -159,12 +161,12 @@ $(function(){
 				
 				<div class="form-group" style="margin-top: -20px">
 					<label class="form-label mt-4 text-left">닉네임</label>
-					<input type="text" class="form-control" name=nickname id=nickname>
+					<input type="text" class="form-control" name=nickname id=nickname required>
 				</div>
 				
 				<div class="form-group">
 					<label class="form-label mt-4 text-left">비밀번호</label>
-					<input type="password" class="form-control" name=pwd id=pwd>
+					<input type="password" class="form-control" name=pwd id=pwd required>
 				</div>
 				
 				<div class="form-group">
@@ -180,20 +182,20 @@ $(function(){
 				
 				<div class="form-group">
 					<label class="form-label mt-4 text-left">전화번호</label>
-	  				<input type=text name=phone id=phone size=55 class="input-sm form-control" placeholder="-를 포함해서 입력하세요.">
+	  				<input type=text name=phone id=phone size=55 class="input-sm form-control" placeholder="-를 포함해서 입력하세요." required>
 				</div>
 				
 				<div class="form-group">
 					<label class="form-label mt-4 text-left">우편번호</label>
 					<input type=text name=post id=post size=10 class="input-sm form-control">
 					<div class="text-right">
-	  				<input type=button value="우편번호검색" class="btn btn-sm btn-danger" id=postBtn onclick="sample6_execDaumPostcode()">
+	  				<input type=button value="우편번호검색" class="btn btn-sm btn-danger" id=postBtn onclick="sample6_execDaumPostcode()" required>
 	  				</div>
 				</div>
 				
 				<div class="form-group" style="margin-top: -20px">
 					<label class="form-label mt-4 text-left">주소</label>
-					<input type=text name=addr1 id=addr1 size=55 class="input-sm form-control" readonly>
+					<input type=text name=addr1 id=addr1 size=55 class="input-sm form-control" readonly required>
 				</div>
 				
 				<div class="form-group">
