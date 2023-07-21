@@ -211,10 +211,10 @@ a {
                     </c:if>
                      <c:if test="${vo.secret=='y' }">
                     <div class="title"><sup><img src="img/secret.png" style="width:15px;height:16px;"></sup>
-                     <c:if test="${sessionScope.id==vo.id || sessionScope.admin=='y' }">
+                     <c:if test="${sessionScope.id==vo.id || sessionScope.admin=='y'}">
                      <a href="../qna/detail.do?no=${vo.no }">${vo.subject }</a>
                      </c:if>
-                     <c:if test="${sessionScope.id!=vo.id}">
+                     <c:if test="${sessionScope.id!=vo.id && sessionScope.admin=='n'}">
                      <span>&nbsp;&nbsp;비밀글입니다.</span>
                      </c:if>
                      </div>
