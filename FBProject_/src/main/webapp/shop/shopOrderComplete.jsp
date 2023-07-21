@@ -28,7 +28,7 @@
 		
 		<h3 class="text">주문이 완료되었습니다!</h3>
 		
-		<a href="../shop/shop.do" class="btn btn-lg btn-success" style="width: 300px;">쇼핑몰 메인 페이지로 이동</a>
+		<a href="../mypage/order_list.do" class="btn btn-lg btn-success" style="width: 300px;">주문 내역 확인</a>
 	</div>
 </div>
 
