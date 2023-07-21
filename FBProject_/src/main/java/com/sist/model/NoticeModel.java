@@ -27,7 +27,7 @@ public class NoticeModel {
 		String ncno=request.getParameter("ncno");
 		String page=request.getParameter("page");
 		String fd=request.getParameter("fd");
-		System.out.println(ncno+fd);
+
 		if(page==null)
 			page="1";
 		int curpage=Integer.parseInt(page);

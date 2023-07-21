@@ -127,8 +127,7 @@ public class AdminpageModel {
 		
 		AdminDAO dao=AdminDAO.newInstance();
 		dao.groundUpdate(vo);
-		
-		System.out.println("goodsModify_Model:수정완료");
+
 	}
 	
 	@RequestMapping("adminpage/groundDelete.do")
@@ -137,8 +136,7 @@ public class AdminpageModel {
 		
 		AdminDAO dao=AdminDAO.newInstance();
 		dao.groundDelete(Integer.parseInt(gno));
-		
-		System.out.println("groundDelete:삭제완료");
+
 	}
 	//--구장 리스트--
 	
@@ -242,8 +240,7 @@ public class AdminpageModel {
 
 		AdminDAO dao=AdminDAO.newInstance();
 		dao.goodsUpdate(vo, slist);
-		
-		System.out.println("goodsModify_Model:수정완료");
+
 	}
 	
 	@RequestMapping("adminpage/goodsDelete.do")
@@ -252,8 +249,7 @@ public class AdminpageModel {
 		
 		AdminDAO dao=AdminDAO.newInstance();
 		dao.goodsDelete(Integer.parseInt(gno));
-		
-		System.out.println("adminpage/goodsDelete.do:삭제완료");
+
 	}
 	
 	@RequestMapping("adminpage/goodsInsert.do")

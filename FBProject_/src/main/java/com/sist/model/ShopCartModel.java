@@ -30,7 +30,6 @@ public class ShopCartModel {
 	@RequestMapping("cart/cartInsert.do")
 	public String shopCartInsert(HttpServletRequest request, HttpServletResponse response) {
 		
-		System.out.println("Insert");
 		String gno = request.getParameter("gno");
 		String tprice = request.getParameter("price");
 		String amount = request.getParameter("amount");
