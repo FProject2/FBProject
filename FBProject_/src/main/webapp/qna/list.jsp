@@ -214,7 +214,7 @@ a {
                      <c:if test="${sessionScope.id==vo.id || sessionScope.admin=='y'}">
                      <a href="../qna/detail.do?no=${vo.no }">${vo.subject }</a>
                      </c:if>
-                     <c:if test="${sessionScope.id!=vo.id && sessionScope.admin=='n'}">
+                     <c:if test="${sessionScope.id!=vo.id && sessionScope.admin=='n' || sessionScope.admin==null}">
                      <span>&nbsp;&nbsp;비밀글입니다.</span>
                      </c:if>
                      </div>
