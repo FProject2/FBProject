@@ -352,7 +352,7 @@ hr {
 					<dd>${vo.hit }</dd>
 				</dl>
 			</div>
-			<div class="cont">${vo.content }</div>
+			<div class="cont"><pre>${vo.content }</pre></div>
 				</div>
 				<div class="bt_wrap">
 				<c:if test="${sessionScope.id==vo.id }">
