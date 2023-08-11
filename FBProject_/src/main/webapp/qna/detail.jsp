@@ -442,7 +442,7 @@ $(function () {
 						</c:if>
 							<img src="img/person.svg" style="height: 20px;width: 20px;">
 						</dt>
-						<dd><c:if test="${rvo.id=='shim'}"><strong>[관리자]&nbsp;</strong></c:if> ${rvo.id }</dd>
+						<dd><c:if test="${rvo.admin=='y'}"><strong>[관리자]&nbsp;</strong></c:if> ${rvo.id }</dd>
 					</dl>
 					
 					

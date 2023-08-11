@@ -4,9 +4,16 @@ import java.util.Date;
 
 public class ReplyVO {
    private int rno,qno,group_id,group_step,group_tab,root,depth;
-   private String id,msg,dbday;
+   private String id,msg,dbday,admin;
    private Date regdate;
-   public int getRno() {
+   
+   public String getAdmin() {
+	return admin;
+}
+public void setAdmin(String admin) {
+	this.admin = admin;
+}
+public int getRno() {
       return rno;
    }
    public void setRno(int rno) {

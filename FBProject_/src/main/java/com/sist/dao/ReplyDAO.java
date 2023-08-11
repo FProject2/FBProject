@@ -27,11 +27,11 @@ public class ReplyDAO {
 		List<ReplyVO> list=new ArrayList<ReplyVO>();
 		try {
 			conn=db.getConnection();
-			String sql="SELECT rno,qno,id,msg,TO_CHAR(regdate,'yyyy-MM-dd HH24:MI:SS'),group_tab,num "
-					+ "FROM (SELECT rno,qno,id,msg,regdate,group_tab,rownum as num "
-					+ "FROM (SELECT rno,qno,id,msg,regdate,group_tab FROM reply WHERE qno=? "
-					+ "ORDER BY group_id DESC,group_step ASC)) "
-					+ "WHERE num BETWEEN ? AND ?";
+			String sql="SELECT r.rno,r.qno,r.id,r.msg,TO_CHAR(r.regdate,'yyyy-MM-dd HH24:MI:SS'),r.group_tab,(SELECT m.admin FROM member m WHERE m.id=r.id) as admin,r.num"
+					+ " FROM (SELECT rno,qno,id,msg,regdate,group_tab,rownum as num"
+					+ " FROM (SELECT rno,qno,id,msg,regdate,group_tab FROM reply WHERE qno=?"
+					+ " ORDER BY group_id DESC,group_step ASC)) r"
+					+ " WHERE num BETWEEN ? AND ?";
 			ps=conn.prepareStatement(sql);
 			
 			int rowSize=5;
@@ -50,6 +50,7 @@ public class ReplyDAO {
 				vo.setMsg(rs.getString(4));
 				vo.setDbday(rs.getString(5));
 				vo.setGroup_tab(rs.getInt(6));
+				vo.setAdmin(rs.getString(7));
 				list.add(vo);
 			}
 			rs.close();
